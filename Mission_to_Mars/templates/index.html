@@ -7,9 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css')}}">
     <title>Mission to Mars</title>
 
   </head>
@@ -20,9 +18,53 @@
             <h1>Mission to Mars</h1>
             <a class="btn btn-outline-primary" href="/scrape" role="button">Scrape New Data</a>
         </div>
-    </div>
-    
 
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Latest Mars News</h2>
+                <h3>{{mars_data.news_title}}</h3>
+                <p>{{mars_data.news_p}}</p>
+            </div>
+        </div>
+
+         <!-- Left section: Featured Mars Image -->
+         <div class="row">
+            <div class="col-12 col-md-8 featured_mars_img">
+                <h2>Featured Mars Image</h2>
+                <img src="{{mars_data.featured_image_url}}" alt="Mars Featured Image" width=95%>
+            </div>
+            
+            <!-- Right section: Mars Facts-->
+            <div class="col-12 col-md-4 mars_facts">
+                <h3>Mars Facts</h3>
+                    {{mars_data.mars_facts|safe}}                          
+            </div>
+        </div>
+
+        <!-- Mars Hemispheres -->
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <h2 class="text-center">Mars Hemispheres</h2>
+                <hr>
+            </div>
+        
+            {% for hemisphere in mars_data.hemisphere_image_urls %}
+        
+            <div class="col-12 col-md-6 d-flex">
+                <div class="card" style="width: 40rem;">
+                    <img src={{hemisphere.img_url}} alt={{hemisphere.title}}>
+                    <div class="card-body">
+                        <p class="card-text">{{hemisphere.title}}</p>
+                    </div>
+                </div>
+            </div>        
+
+            {% endfor %}
+
+        </div>
+    </div>
   
 
     <!-- Bootstrap Bundle with Popper -->
