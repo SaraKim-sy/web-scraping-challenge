@@ -72,3 +72,15 @@ MongoDB with Flask templating were used to create a new HTML page that displays 
 ![final_app_part2.png](./Mission_to_Mars/screenshots/hemispheres.PNG)
 
 - - -
+
+## <a name="technologies"></a> Technologies
+This project was created with:
+* Splinter
+* Python 3.8
+* Jupyter Notebook
+* BeautifulSoup
+* Pandas
+* MongoDB
+* Flask
+* HTML/CSS
+
