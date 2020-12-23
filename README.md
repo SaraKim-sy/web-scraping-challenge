@@ -52,15 +52,15 @@ This repository is to build a web application that scrapes various websites for 
 
 MongoDB with Flask templating were used to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
-* Started by converting your Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
+* Started by converting the Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all of the scraping code from above and return one Python dictionary containing all of the scraped data.
 
-* Next, a route called `/scrape` that will import your `scrape_mars.py` script and call your `scrape` function was created.
+* Next, a route called `/scrape` that will import the `scrape_mars.py` script and call the `scrape` function was created.
 
   * The return value was stored in Mongo as a Python dictionary.
   
   * The existing document will be overwritten each time the `/scrape` url is visited and new data is obtained.
 
-* A root route `/` that will query your Mongo database and pass the mars data into an HTML template to display the data was created.
+* A root route `/` that will query the Mongo database and pass the mars data into an HTML template to display the data was created.
 
 * A template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements was created. 
 
