@@ -1,7 +1,6 @@
 # Web Scraping Challenge
 
-
-![mission_to_mars](Images/mission_to_mars.png)
+![mars](./Mission_to_Mars/screenshots/mars.jpg)
 
 This repository is to build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page.
 
