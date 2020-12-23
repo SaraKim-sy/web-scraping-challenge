@@ -29,8 +29,13 @@
         }
 
         .top {
-            background-color: rgb(237, 237, 237);
+            background-color: #eee;
             padding: 50px;
+        }
+
+        .mid {
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
 
         .container {
@@ -88,11 +93,12 @@
                 <h2>Latest Mars News</h2>
                 <h3>{{mars_data.news_title}}</h3>
                 <p>{{mars_data.news_p}}</p>
+                <hr>
             </div>
         </div>
 
          <!-- Left section: Featured Mars Image -->
-         <div class="row">
+         <div class="row mid">
             <div class="col-12 col-md-8 featured_mars_img">
                 <h2>Featured Mars Image</h2>
                 <img src="{{mars_data.featured_image_url}}" alt="Mars Featured Image" width=95%>
@@ -115,9 +121,9 @@
         
             {% for hemisphere in mars_data.hemisphere_image_urls %}
         
-            <div class="col-12 col-md-6 d-flex">
-                <div class="card mt-5" style="width: 35rem;">
-                    <img src={{hemisphere.img_url}} alt={{hemisphere.title}}>
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 35rem;">
+                    <img src={{hemisphere.img_url}} class="card-img-top" alt={{hemisphere.title}}>
                     <div class="card-body">
                         <p class="card-text">{{hemisphere.title}}</p>
                     </div>
