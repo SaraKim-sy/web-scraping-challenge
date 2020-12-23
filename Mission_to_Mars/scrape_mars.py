@@ -64,7 +64,7 @@ def scrape_info():
     url = 'https://space-facts.com/mars/'
     browser.visit(url)
     # Use time.sleep to load the webpage
-    time.sleep(2)
+    time.sleep(1)
     # HTML object
     html = browser.html
     # Parse HTML with Beautiful Soup
@@ -73,12 +73,12 @@ def scrape_info():
     tables = pd.read_html(url)
 
     mars_df = tables[0]
-    mars_df.columns = ['Description', 'Value']
+    mars_df.columns = ['Description', 'Mars']
     mars_df.set_index('Description', inplace=True)
 
     # Use Pandas to convert the data to a HTML table string
-    mars_facts = mars_df.to_html()
-    mars_facts.replace("\n", "")
+    mars_facts = mars_df.to_html(classes='table-style')
+    mars_facts.replace('\n', '')
 
     mars_df.to_html('mars_facts.html')
 
