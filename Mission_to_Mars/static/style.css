@@ -1,16 +1,16 @@
 /* headlines styling*/
 h1{
-  font-size: 50px;
+  font-size: 55px;
   font-weight: bold;
 }
 
 h2{
-  font-size: 25px;
-  font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 h3{
-  font-size: 20px;
+    font-size: 20px;
 }
 
 /* body styling*/
@@ -19,17 +19,17 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .top {
-  background-color: #eee;
-  padding: 50px;
+    background-color: #eee;
+    padding: 65px;
 }
 
 .mid {
-  padding-top: 15px;
-  padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .container {
-  padding: 20px;
+    padding: 20px;
 }
 
 .img {
@@ -49,16 +49,6 @@ font-size: 20px;
 
 /* table styling*/
 table.dataframe, .dataframe th, .dataframe td {
-border: none;
-border-bottom: 1px solid #C8C8C8;
-border-collapse: collapse;
-text-align:left;
-padding: 10px;
-margin-bottom: 40px;
-font-size: 15px;
+    text-align:left;
 }
-
-tr:nth-child(odd)	{ background-color:#eee; }
-tr:nth-child(even)	{ background-color:#fff; }
-
 tr:hover            { background-color: #ffff99;}

@@ -77,7 +77,7 @@ def scrape_info():
     mars_df.set_index('Description', inplace=True)
 
     # Use Pandas to convert the data to a HTML table string
-    mars_facts = mars_df.to_html(classes='table-style')
+    mars_facts = mars_df.to_html(classes="table table-striped")
     mars_facts.replace('\n', '')
 
     mars_df.to_html('mars_facts.html')
